@@ -1,0 +1,21 @@
+name: Test
+on:
+  push:
+    branches:
+      - main
+  create: #Trigger this anytime a branch or anything gets created, so there isn't any block below this.
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Get the source
+        uses: actions/checkout@v2
+      - name: Create a release draft for a version tag
+        id: create_release-draft
+        uses: ./
+      - name: Print the URL of the release draft
+        run: echo ${{ steps.create_release-draft.outputs.release-url}}
