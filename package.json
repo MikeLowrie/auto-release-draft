@@ -1,16 +1,13 @@
 {
-  "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
+  "name": "auto-release-draft",
+  "description": "Drafts a GitHub release with changes introduced thanks to a tag",
   "version": "0.0.0",
-  "author": "",
+  "author": "Mike Lowrie",
   "private": true,
   "homepage": "https://github.com/actions/typescript-action",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
-  },
-  "bugs": {
-    "url": "https://github.com/actions/typescript-action/issues"
+    "url": "git+https://github.com/MikeLowrie/auto-release-draft.git"
   },
   "keywords": [
     "actions",
